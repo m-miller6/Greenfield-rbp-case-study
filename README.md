@@ -29,7 +29,7 @@ Leadership wants to understand: How is the RBP performing? Where are we losing r
 
 ## Key Findings
 
-- **Alexandria churn issue:** The Alexandria market shows 27.7% churn vs. 23.8% in Arlington and DC—a 16% relative increase that's consistent across all 12 Alexandria properties.
+- **Alexandria churn issue:** The Alexandria market shows 27.7% churn vs. 23.8% in Arlington and DC, a 16% relative increase that's consistent across all 12 Alexandria properties.
 - **Early activation matters:** Residents who activate at least one benefit within 7 days of enrollment have ~34% lower churn rates than late activators.
 - **Data quality flag:** One property (P017) has 38% of enrollments missing activation dates, suggesting a process or integration issue.
 
@@ -37,7 +37,7 @@ Leadership wants to understand: How is the RBP performing? Where are we losing r
 
 **Cohort analysis over individual modeling:** I used monthly cohorts for retention analysis rather than individual-level survival curves. Cohorts are easier to explain to a property management audience and more directly actionable for operations planning. The tradeoff is less precision for any single resident.
 
-**Simulated data with embedded patterns:** The data is synthetic but designed to contain realistic, discoverable insights. Real analysis would involve messier data and more ambiguous findings—but for a portfolio piece, I wanted to show the full analytical workflow from validation through recommendation.
+**Simulated data with embedded patterns:** The data is synthetic but designed to contain realistic, discoverable insights. Real analysis would involve messier data and more ambiguous findings, but for a portfolio piece, I wanted to show the full analytical workflow from validation through recommendation.
 
 **BigQuery SQL syntax:** I wrote queries in BigQuery Standard SQL because it's commonly used in growth-stage companies and has good documentation. The queries should be portable to other SQL dialects with minor adjustments.
 
@@ -52,6 +52,6 @@ Leadership wants to understand: How is the RBP performing? Where are we losing r
 ## Author
 
 **Michael Miller**
-[LinkedIn](https://linkedin.com/in/your-profile)
+[LinkedIn](https://www.linkedin.com/in/michael-e-miller1/)
 
 Built as a portfolio project for Second Nature's Business Intelligence Analyst position.
