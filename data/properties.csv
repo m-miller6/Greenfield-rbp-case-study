@@ -1,0 +1,36 @@
+property_id,property_name,city,state,unit_count,onboarding_date,property_manager_name
+P001,The Meridian at Clarendon,Arlington,VA,185,2022-06-15,Sarah Chen
+P002,Potomac View Apartments,Alexandria,VA,142,2022-06-22,Marcus Williams
+P003,Capitol Hill Residences,Washington,DC,210,2022-07-01,Jennifer Park
+P004,Ballston Metro Living,Arlington,VA,168,2022-07-10,Sarah Chen
+P005,Old Town Commons,Alexandria,VA,95,2022-07-18,David Rodriguez
+P006,Dupont Circle Flats,Washington,DC,78,2022-08-01,Amanda Foster
+P007,Crystal Gateway Towers,Arlington,VA,245,2022-08-05,Marcus Williams
+P008,Del Ray Gardens,Alexandria,VA,112,2022-08-12,Jennifer Park
+P009,Navy Yard Landing,Washington,DC,198,2022-08-20,Brian Thompson
+P010,Rosslyn Heights,Arlington,VA,156,2022-09-01,Sarah Chen
+P011,Eisenhower East Apartments,Alexandria,VA,180,2022-09-08,David Rodriguez
+P012,Adams Morgan Lofts,Washington,DC,65,2022-09-15,Amanda Foster
+P013,Shirlington Village,Arlington,VA,134,2022-09-22,Marcus Williams
+P014,Carlyle Square,Alexandria,VA,225,2022-10-01,Jennifer Park
+P015,Columbia Heights Station,Washington,DC,145,2022-10-10,Brian Thompson
+P016,Courthouse Commons,Arlington,VA,88,2022-10-18,Sarah Chen
+P017,Landmark Center Residences,Alexandria,VA,192,2022-11-01,David Rodriguez
+P018,Logan Circle Apartments,Washington,DC,72,2022-11-08,Amanda Foster
+P019,Pentagon City Place,Arlington,VA,278,2022-11-15,Marcus Williams
+P020,Kingstowne Village,Alexandria,VA,165,2022-12-01,Jennifer Park
+P021,Brookland Manor,Washington,DC,118,2022-12-10,Brian Thompson
+P022,Virginia Square Towers,Arlington,VA,195,2023-01-05,Sarah Chen
+P023,Huntington Station,Alexandria,VA,148,2023-01-15,David Rodriguez
+P024,Petworth Place,Washington,DC,92,2023-02-01,Amanda Foster
+P025,Clarendon Court,Arlington,VA,125,2023-02-12,Marcus Williams
+P026,Belle Haven Apartments,Alexandria,VA,108,2023-03-01,Jennifer Park
+P027,H Street Corridor Flats,Washington,DC,155,2023-03-15,Brian Thompson
+P028,Ballston Quarter Living,Arlington,VA,215,2023-04-01,Sarah Chen
+P029,Mount Vernon Square,Alexandria,VA,175,2023-04-20,David Rodriguez
+P030,Georgetown Edge,Washington,DC,58,2023-05-01,Amanda Foster
+P031,East Falls Church Commons,Arlington,VA,142,2023-05-15,Marcus Williams
+P032,Potomac Yard Residences,Alexandria,VA,188,2023-06-01,Jennifer Park
+P033,Shaw District Apartments,Washington,DC,135,2023-07-01,Brian Thompson
+P034,Lyon Village Flats,Arlington,VA,95,2023-08-01,Sarah Chen
+P035,West End Alexandria,Alexandria,VA,162,2023-09-01,David Rodriguez
