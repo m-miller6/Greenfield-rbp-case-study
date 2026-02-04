@@ -17,10 +17,10 @@ Leadership wants to understand: How is the RBP performing? Where are we losing r
 │   ├── benefit_enrollments.csv # 22,672 enrollment records
 │   └── data_dictionary.md     # Field definitions and notes
 ├── sql/
-│   ├── 01_data_validation.sql # Data quality checks
-│   ├── 02_core_metrics.sql    # KPIs: Active Units, CARR, activation rates
-│   ├── 03_cohort_analysis.sql # Monthly retention cohorts
-│   └── 04_churn_investigation.sql # Churn drivers analysis
+│   ├── data_validation.sql # Data quality checks
+│   ├── core_metrics.sql    # KPIs: Active Units, CARR, activation rates
+│   ├── cohort_analysis.sql # Monthly retention cohorts
+│   └── churn_investigation.sql # Churn drivers analysis
 ├── analysis/
 │   └── findings.md            # Written analysis with recommendations
 └── dashboard/
