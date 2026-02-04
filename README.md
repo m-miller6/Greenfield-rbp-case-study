@@ -1,10 +1,10 @@
 # Greenfield Properties RBP Analytics
 
-A portfolio project demonstrating Business Intelligence skills in a PropTech context. Created for Second Nature's Business Intelligence Analyst role.
+A portfolio project demonstrating Business Intelligence skills in a PropTech context. 
 
 ## The Scenario
 
-Greenfield Properties is a fictional property management company operating 35 apartment communities in the Washington DC metro area (Arlington, Alexandria, and DC). They've implemented a Resident Benefits Package (RBP) through a platform similar to Second Nature's, offering services like renters insurance, credit building, air filter delivery, pest control, and a rewards program.
+Greenfield Properties is a fictional property management company operating 35 apartment communities in the Washington DC metro area (Arlington, Alexandria, and DC). They've implemented a Resident Benefits Package (RBP), offering services like renters insurance, credit building, air filter delivery, pest control, and a rewards program.
 
 Leadership wants to understand: How is the RBP performing? Where are we losing residents? What can we do about it?
 
@@ -54,4 +54,3 @@ Leadership wants to understand: How is the RBP performing? Where are we losing r
 **Michael Miller**
 [LinkedIn](https://www.linkedin.com/in/michael-e-miller1/)
 
-Built as a portfolio project for Second Nature's Business Intelligence Analyst position.
