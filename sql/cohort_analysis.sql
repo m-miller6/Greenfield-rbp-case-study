@@ -1,22 +1,14 @@
--- =============================================================================
--- COHORT RETENTION ANALYSIS
--- =============================================================================
--- Purpose: Track resident retention over time by grouping residents into monthly
--- cohorts based on their lease start date.
+-- Cohort retention analysis
+-- Goal: understand retention over the resident lifecycle by grouping residents into
+-- monthly cohorts based on lease_start_date.
 --
--- Why cohort analysis? Unlike simple churn rates, cohort analysis shows how
--- retention changes over the resident lifecycle. This helps answer questions like:
--- - Do we lose most residents early or late in their lease?
--- - Are newer cohorts retaining better than older ones?
--- - At what point should we intervene to prevent churn?
--- =============================================================================
+-- Why cohorts: churn rates can hide when residents leave. Cohorts make it easier to see:
+-- - do we lose people early vs late in the lease?
+-- - are newer cohorts behaving differently than older ones?
+-- - when should we intervene to prevent churn?
 
--- -----------------------------------------------------------------------------
--- 1. Monthly Cohort Retention Table
--- -----------------------------------------------------------------------------
--- Groups residents by lease start month and tracks what percentage are still
--- active at months 1, 3, 6, 9, and 12.
-
+-- 1) Monthly cohort retention table
+-- Group residents by lease start month, then calculate % still active at M1/M3/M6/M9/M12.
 with resident_cohorts as (
     select
         resident_id,
@@ -25,10 +17,10 @@ with resident_cohorts as (
         move_out_date,
         date_trunc(lease_start_date, month) as cohort_month,
         case
-            when move_out_date is null then 9999  -- Still active, use large number
+            when move_out_date is null then 9999  -- still active; treat as "hasn't churned yet"
             else date_diff(move_out_date, lease_start_date, month)
         end as months_until_churn
-    from `project.dataset.residents`
+    from `greenfield-rbp-analysis.greenfield.residents`
 ),
 cohort_sizes as (
     select
@@ -37,53 +29,43 @@ cohort_sizes as (
     from resident_cohorts
     group by cohort_month
 )
-
 select
     format_date('%Y-%m', rc.cohort_month) as cohort,
     cs.cohort_size,
 
-    -- Month 1 retention
     round(
         sum(case when rc.months_until_churn >= 1 then 1 else 0 end) / cs.cohort_size * 100,
         1
     ) as retention_m1,
 
-    -- Month 3 retention
     round(
         sum(case when rc.months_until_churn >= 3 then 1 else 0 end) / cs.cohort_size * 100,
         1
     ) as retention_m3,
 
-    -- Month 6 retention
     round(
         sum(case when rc.months_until_churn >= 6 then 1 else 0 end) / cs.cohort_size * 100,
         1
     ) as retention_m6,
 
-    -- Month 9 retention
     round(
         sum(case when rc.months_until_churn >= 9 then 1 else 0 end) / cs.cohort_size * 100,
         1
     ) as retention_m9,
 
-    -- Month 12 retention
     round(
         sum(case when rc.months_until_churn >= 12 then 1 else 0 end) / cs.cohort_size * 100,
         1
     ) as retention_m12
-
 from resident_cohorts rc
 join cohort_sizes cs on rc.cohort_month = cs.cohort_month
-where rc.cohort_month < date_trunc(current_date(), month)  -- Exclude current partial month
+where rc.cohort_month < date_trunc(current_date(), month)  -- exclude the current partial month
 group by rc.cohort_month, cs.cohort_size
 order by rc.cohort_month;
 
 
--- -----------------------------------------------------------------------------
--- 2. Cohort Churn Rates (inverse of retention)
--- -----------------------------------------------------------------------------
--- Sometimes stakeholders prefer to see churn rather than retention.
-
+-- 2) Cohort churn rates (inverse of retention)
+-- Same cohort setup, but shown as churn-by checkpoints (some stakeholders prefer this view).
 with resident_cohorts as (
     select
         resident_id,
@@ -92,7 +74,7 @@ with resident_cohorts as (
             when move_out_date is null then 9999
             else date_diff(move_out_date, lease_start_date, month)
         end as months_until_churn
-    from `project.dataset.residents`
+    from `greenfield-rbp-analysis.greenfield.residents`
 ),
 cohort_sizes as (
     select
@@ -101,7 +83,6 @@ cohort_sizes as (
     from resident_cohorts
     group by cohort_month
 )
-
 select
     format_date('%Y-%m', rc.cohort_month) as cohort,
     cs.cohort_size,
@@ -119,16 +100,13 @@ select
     ) as churn_by_m12
 from resident_cohorts rc
 join cohort_sizes cs on rc.cohort_month = cs.cohort_month
-where rc.cohort_month <= date_sub(current_date(), interval 12 month)  -- Only cohorts with 12 months of data
+where rc.cohort_month <= date_sub(current_date(), interval 12 month)  -- only cohorts with 12+ months of runway
 group by rc.cohort_month, cs.cohort_size
 order by rc.cohort_month;
 
 
--- -----------------------------------------------------------------------------
--- 3. Cohort Retention by City
--- -----------------------------------------------------------------------------
--- Breaks down cohort retention by market to identify geographic patterns.
-
+-- 3) Cohort retention by city
+-- Quick market cut: where are cohorts holding up better/worse (M6 / M12)?
 with resident_cohorts as (
     select
         r.resident_id,
@@ -138,10 +116,9 @@ with resident_cohorts as (
             when r.move_out_date is null then 9999
             else date_diff(r.move_out_date, r.lease_start_date, month)
         end as months_until_churn
-    from `project.dataset.residents` r
-    join `project.dataset.properties` p on r.property_id = p.property_id
+    from `greenfield-rbp-analysis.greenfield.residents` r
+    join `greenfield-rbp-analysis.greenfield.properties` p on r.property_id = p.property_id
 )
-
 select
     city,
     count(*) as total_residents,
@@ -159,11 +136,8 @@ group by city
 order by retention_m12 desc;
 
 
--- -----------------------------------------------------------------------------
--- 4. Rolling 12-Month Cohort Comparison
--- -----------------------------------------------------------------------------
--- Compares recent cohorts to older ones to see if retention is improving.
-
+-- 4) Rolling 12-month cohort comparison
+-- Compare two “year buckets” of cohorts to see if retention is improving over time.
 with resident_cohorts as (
     select
         resident_id,
@@ -172,7 +146,7 @@ with resident_cohorts as (
             when move_out_date is null then 9999
             else date_diff(move_out_date, lease_start_date, month)
         end as months_until_churn
-    from `project.dataset.residents`
+    from `greenfield-rbp-analysis.greenfield.residents`
 ),
 cohort_periods as (
     select
@@ -184,7 +158,6 @@ cohort_periods as (
         end as period
     from resident_cohorts
 )
-
 select
     period,
     count(*) as cohort_size,
@@ -202,11 +175,8 @@ group by period
 order by period;
 
 
--- -----------------------------------------------------------------------------
--- 5. Survival Curve Data (for visualization)
--- -----------------------------------------------------------------------------
--- Provides data points for a survival curve chart showing retention over time.
-
+-- 5) Survival curve data (for visualization)
+-- Output points you can plot as a survival curve: retention % over days since lease start.
 with resident_cohorts as (
     select
         resident_id,
@@ -214,14 +184,13 @@ with resident_cohorts as (
             when move_out_date is null then 999
             else date_diff(move_out_date, lease_start_date, day)
         end as days_until_churn
-    from `project.dataset.residents`
-    where lease_start_date <= date_sub(current_date(), interval 365 day)  -- At least 1 year of data
+    from `greenfield-rbp-analysis.greenfield.residents`
+    where lease_start_date <= date_sub(current_date(), interval 365 day)  -- need at least ~1 year of runway
 ),
 day_points as (
     select day_num
-    from unnest(generate_array(0, 365, 30)) as day_num  -- Every 30 days
+    from unnest(generate_array(0, 365, 30)) as day_num  -- every 30 days
 )
-
 select
     dp.day_num as days_since_lease_start,
     count(*) as total_residents,
