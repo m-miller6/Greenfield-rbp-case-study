@@ -1,4 +1,4 @@
--- Data validation checks for Greenfield Properties RBP greenfield
+-- Data validation checks for Greenfield Properties RBP 
 -- Run this file first to sanity-check required fields, joins, and date logic.
 -- Each query returns counts you can scan for anomalies.
 
