@@ -14,7 +14,7 @@ Leadership wants to understand: How is the RBP performing? Where are we losing r
 ├── data/
 │   ├── properties.csv         # 35 properties
 │   ├── residents.csv          # 6,500 resident records
-│   ├── benefit_enrollments.csv # ~22,600 enrollment records
+│   ├── benefit_enrollments.csv # 22,672 enrollment records
 │   └── data_dictionary.md     # Field definitions and notes
 ├── sql/
 │   ├── 01_data_validation.sql # Data quality checks
