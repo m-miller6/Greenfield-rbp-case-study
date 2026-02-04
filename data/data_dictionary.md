@@ -8,7 +8,7 @@ This document describes the structure and contents of the Greenfield Properties 
 |-------|-------------|-----------|
 | properties | Property information for Greenfield's portfolio | 35 |
 | residents | Resident lease records | 6,500 |
-| benefit_enrollments | RBP benefit enrollment records | ~22,600 |
+| benefit_enrollments | RBP benefit enrollment records | 22,672 |
 
 ---
 
