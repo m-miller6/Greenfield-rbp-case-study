@@ -23,8 +23,6 @@ Leadership wants to understand: How is the RBP performing? Where are we losing r
 │   └── churn_investigation.sql # Churn drivers analysis
 ├── analysis/
 │   └── findings.md             # Written analysis with recommendations
-├── dashboard/
-│   └── dashboard_spec.md       # Looker Studio dashboard specification
 └── results/
     ├── bigquery_active_units.png          # Query result: 4,863 active residents
     ├── bigquery_carr.png                  # Query result: $974,676 annual revenue
