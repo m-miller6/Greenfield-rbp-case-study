@@ -75,7 +75,7 @@ This intervention is low-cost and directly addresses the retention correlation f
 
 ## Methodology Notes
 
-**Data scope:** 35 properties, 6,500 residents, ~22,600 benefit enrollments spanning July 2022 through November 2024.
+**Data scope:** 35 properties, 6,500 residents, 22,672 benefit enrollments spanning July 2022 through January 2025.
 
 **Churn definition:** A resident is considered churned if `move_out_date` is not null. This captures both lease non-renewals and early terminations.
 
@@ -90,7 +90,7 @@ This intervention is low-cost and directly addresses the retention correlation f
 
 ## Appendix: Data Quality Issues Identified
 
-- **P017 activation gap:** 38% of enrollments at Landmark Center Residences have null activation dates vs. ~25% portfolio average
+- **P017 activation gap:** 38% of enrollments at Landmark Center Residences have null activation dates vs. ~26% portfolio average
 - **Future lease dates:** Some `lease_end_date` values extend beyond the analysis period, which is expected for active leases but should be monitored
 - **Benefit cancellation timing:** A small number of cancellation dates fall on the same day as activation, which may indicate immediate regret or data entry errors
 - **Rent amount outliers:** Rent values appear reasonable ($1,400-$3,200 range) with no obvious data entry errors detected
