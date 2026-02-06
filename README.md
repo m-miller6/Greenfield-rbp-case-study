@@ -37,7 +37,7 @@ Leadership wants to understand: How is the RBP performing? Where are we losing r
 
 ## Key Findings
 
-- **Alexandria churn issue:** The Alexandria market shows 27.7% churn vs. 24.5% in Arlington and DC, a 22.7% relative increase that's consistent across all 12 Alexandria properties.
+- **Alexandria churn issue:** The Alexandria market shows 27.7% churn vs. 23.6% in Arlington and DC, a 17.4% relative increase that's consistent across all 12 Alexandria properties.
 - **Early activation matters:** Residents who activate at least one benefit within 7 days of enrollment have ~34% lower churn rates than late activators.
 - **Data quality flag:** One property (P017) has 38% of enrollments missing activation dates, suggesting a process or integration issue.
 
