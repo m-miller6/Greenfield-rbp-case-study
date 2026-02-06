@@ -20,7 +20,7 @@ Alexandria properties show a 27.7% churn rate compared to 23.6% for the rest of 
 
 The elevated churn appears market-wide rather than tied to specific property managers, rent levels, or property characteristics. Further investigation into local competitive dynamics (new construction, pricing pressure, commute patterns) is warranted.
 
-**Impact estimate:** Reducing Alexandria churn to portfolio average would retain ~90 additional residents annually, representing approximately $36,000 in preserved CARR.
+**Impact estimate:** Reducing Alexandria churn to portfolio average would retain 95 additional residents annually, representing approximately $20,000 in preserved CARR.
 
 ### 2. Early Benefit Activation Correlates with Retention
 
