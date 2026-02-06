@@ -12,19 +12,29 @@ Leadership wants to understand: How is the RBP performing? Where are we losing r
 
 ```
 ├── data/
-│   ├── properties.csv         # 35 properties
-│   ├── residents.csv          # 6,500 resident records
+│   ├── properties.csv          # 35 properties
+│   ├── residents.csv           # 6,500 resident records
 │   ├── benefit_enrollments.csv # 22,672 enrollment records
-│   └── data_dictionary.md     # Field definitions and notes
+│   └── data_dictionary.md      # Field definitions and notes
 ├── sql/
-│   ├── data_validation.sql # Data quality checks
-│   ├── core_metrics.sql    # KPIs: Active Units, CARR, activation rates
-│   ├── cohort_analysis.sql # Monthly retention cohorts
+│   ├── data_validation.sql     # Data quality checks
+│   ├── core_metrics.sql        # KPIs: Active Units, CARR, activation rates
+│   ├── cohort_analysis.sql     # Monthly retention cohorts
 │   └── churn_investigation.sql # Churn drivers analysis
 ├── analysis/
-│   └── findings.md            # Written analysis with recommendations
-└── dashboard/
-    └── dashboard_spec.md      # Looker Studio dashboard specification
+│   └── findings.md             # Written analysis with recommendations
+├── dashboard/
+│   └── dashboard_spec.md       # Looker Studio dashboard specification
+└── results/
+    ├── bigquery_active_units.png          # Query result: 4,863 active residents
+    ├── bigquery_carr.png                  # Query result: $974,676 annual revenue
+    ├── bigquery_activation_rate.png       # Query result: 74.1% activation rate
+    ├── bigquery_churn_by_city.png         # Query result: Churn rates by market
+    ├── bigquery_activation_by_benefit.png # Query result: Activation by benefit type
+    ├── bigquery_early_late_churn.png      # Query result: Early vs late activator churn
+    ├── dashboard_executive_overview.png   # Dashboard page 1 screenshot
+    ├── dashboard_retention_deep_dive.png  # Dashboard page 2 screenshot
+    └── dashboard_link.md                  # Live Looker Studio dashboard URL
 ```
 
 ## Key Findings
