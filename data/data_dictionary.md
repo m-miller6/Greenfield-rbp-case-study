@@ -111,10 +111,3 @@ residents (1) ──────< (many) benefit_enrollments
 - Foreign keys: benefit_enrollments.resident_id → residents.resident_id
 
 ---
-
-## Data Freshness
-
-- Data current as of: November 2024
-- Properties data: Complete
-- Residents data: Includes leases starting through October 2024
-- Enrollments data: Includes enrollments through November 2024
