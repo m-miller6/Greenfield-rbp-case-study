@@ -28,8 +28,8 @@ Residents who activate at least one benefit within 7 days of enrollment have app
 
 | Activation Timing | Residents | Churn Rate |
 |-------------------|-----------|------------|
-| Early (0-7 days) | ~5,200 | 22.7% |
-| Late (8+ days) | ~1,200 | 34.2% |
+| Early (0-7 days) | 5,194  | 22.7% |
+| Late (8+ days) | 1,183 | 34.2% |
 
 This is the strongest behavioral predictor of retention identified in the data. The first week after enrollment appears to be a critical window for resident engagement.
 
