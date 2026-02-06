@@ -35,7 +35,7 @@ This is the strongest behavioral predictor of retention identified in the data. 
 
 ### 3. Data Quality Issue at Property P017
 
-Property P017 (Landmark Center Residences) has a 38% null activation rate—significantly higher than the portfolio average of ~25%. This affects roughly 250 resident enrollments.
+Property P017 (Landmark Center Residences) has a 38% null activation rate—significantly higher than the portfolio average of 26.3%. This affects roughly 300 resident enrollments.
 
 The pattern suggests either:
 - A process gap at the property (staff not completing activation steps)
