@@ -10,13 +10,13 @@ Greenfield Properties' Resident Benefits Package shows solid overall adoption wi
 
 ### 1. Alexandria Market Has Elevated Churn
 
-Alexandria properties show a 27.7% churn rate compared to 23.8% for the rest of the portfolio—a 16% relative increase. This pattern is consistent across all 12 Alexandria properties, ruling out individual property issues.
+Alexandria properties show a 27.7% churn rate compared to 23.6% for the rest of the portfolio—a 17.4% relative increase. This pattern is consistent across all 12 Alexandria properties, ruling out individual property issues.
 
 | Market | Total Residents | Churn Rate |
 |--------|-----------------|------------|
-| Alexandria, VA | ~2,290 | 27.7% |
-| Arlington, VA | ~2,380 | 24.1% |
-| Washington, DC | ~1,830 | 23.4% |
+| Alexandria, VA | 2,315 | 27.7% |
+| Arlington, VA | 2,522 | 24.5% |
+| Washington, DC | 1,663 | 22.7% |
 
 The elevated churn appears market-wide rather than tied to specific property managers, rent levels, or property characteristics. Further investigation into local competitive dynamics (new construction, pricing pressure, commute patterns) is warranted.
 
