@@ -51,7 +51,7 @@ Leadership wants to understand: How is the RBP performing? Where are we losing r
 
 ## What I'd Do Next
 
-1. **Exit survey analysis:** The Alexandria churn insight raises questions that data alone can't answer. I'd want to look at qualitative data—exit surveys, NPS comments, or even a few phone calls to recent move-outs—to understand whether this is a competitive issue, a service issue, or something else.
+1. **Exit survey analysis:** The Alexandria churn insight raises questions that data alone can't answer. I'd want to look at qualitative data: exit surveys, NPS comments, or even a few phone calls to recent move-outs. This would help me understand whether this is a competitive issue, a service issue, or something else.
 
 2. **Activation funnel:** The early activation correlation is strong, but I'd want to map out exactly where residents drop off in the activation flow. Is it at email open? First click? Account creation? Knowing this would help target the intervention.
 
