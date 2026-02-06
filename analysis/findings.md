@@ -2,7 +2,7 @@
 
 ## Executive Summary
 
-Greenfield Properties' Resident Benefits Package shows solid overall adoption with ~3.5 benefits enrolled per resident and a 75% activation rate. However, the Alexandria market exhibits 16% higher churn than Arlington and DC (27.7% vs 23.8%), representing the largest retention opportunity in the portfolio. Additionally, residents who activate benefits within 7 days of enrollment show significantly better retention, pointing to a clear operational intervention.
+Greenfield Properties' Resident Benefits Package shows solid overall adoption with ~3.5 benefits enrolled per resident and a 75% activation rate. However, the Alexandria market exhibits 17% higher churn than Arlington and DC (27.7% vs 23.6%), representing the largest retention opportunity in the portfolio. Additionally, residents who activate benefits within 7 days of enrollment show significantly better retention, pointing to a clear operational intervention.
 
 ---
 
