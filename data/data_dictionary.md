@@ -29,7 +29,7 @@ Property-level information for Greenfield Properties' portfolio in the DC metro 
 **Notes:**
 - Properties span three markets: Arlington VA, Alexandria VA, and Washington DC
 - Unit counts range from 58 to 278 units
-- 8 property managers oversee the portfolio, each managing 4-5 properties
+- 6 property managers oversee the portfolio, each managing 4-5 properties
 - Onboarding dates range from June 2022 to September 2023
 
 ---
@@ -48,7 +48,7 @@ Individual resident lease records. Each row represents one lease term for a resi
 | rent_amount | INTEGER | Monthly rent in USD | 2450 |
 
 **Notes:**
-- Lease terms are either 6 months (~15%) or 12 months (~85%)
+- Lease terms are either 6 months (13.4%) or 12 months (69.6%)
 - Move-out dates may differ from lease end dates (early termination, month-to-month, etc.)
 - NULL move_out_date indicates currently active resident
 - Rent amounts vary by market: DC tends higher, outer Arlington lower
